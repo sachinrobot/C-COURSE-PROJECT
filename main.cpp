@@ -94,5 +94,5 @@ int main()
         for(int i=0;i<medfinalpoints.size();i++)
             cout<<surname[i]<<"\t"<<name[i]<<"\t"<<medfinalpoints[i]<<"\n";
     }
-    
+   
 }

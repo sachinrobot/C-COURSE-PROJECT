@@ -32,23 +32,23 @@ struct program
 
   
 
-float Terminal_Score_average_function ( vector<float> Assignment _data, float Examination_function ) 
+float Terminal_Score_average_function ( vector<float> Assignment_data, float Examination_function ) 
 
 { 
 
     float sum; 
 
-    for(int k=0; k<=Assignment _data.size(); k++) 
+    for(int k=0; k<=Assignment_data.size(); k++) 
 
     { 
 
-        sum += Assignment _data[k]; 
+        sum += Assignment_data[k]; 
 
     } 
 
     float r; 
 
-    r = sum / Assignment _data.size() * 0.4 + Examination_function * 0.6; 
+    r = sum / Assignment_data.size() * 0.4 + Examination_function * 0.6; 
 
     return r; 
 
@@ -56,23 +56,23 @@ float Terminal_Score_average_function ( vector<float> Assignment _data, float Ex
 
   
 
-float Terminal_Score_median_function (vector<float> Assignment _data_2, float Examination_function_2) 
+float Terminal_Score_median_function (vector<float> Assignment_data_2, float Examination_function_2) 
 
 { 
 
     float median_Score_short_term; 
 
-        sort(Assignment _data_2.begin(), Assignment _data_2.end()); 
+        sort(Assignment_data_2.begin(), Assignment_data_2.end()); 
 
-        if (Assignment _data_2.size() % 2 == 0) 
+        if (Assignment_data_2.size() % 2 == 0) 
 
-            median_Score_short_term = (Assignment _data_2[Assignment _data_2.size()/2 - 1] + Assignment _data_2[Assignment _data_2.size()/2]) / 2; 
+            median_Score_short_term = (Assignment_data_2[Assignment_data_2.size()/2 - 1] + Assignment_data_2[Assignment_data_2.size()/2]) / 2; 
 
   
 
         else 
 
-            median_Score_short_term = Assignment _data_2[Assignment _data_2.size()/2]; 
+            median_Score_short_term = Assignment_data_2[Assignment_data_2.size()/2]; 
 
     float r_2; 
 
@@ -216,7 +216,7 @@ int main()
 
   
 
-        float total_Assignment _short_term = 0; 
+        float total_Assignment_short_term = 0; 
 
         int k; 
 
@@ -242,15 +242,15 @@ int main()
 
   
 
-                    float Assignment _short_term; 
+                    float Assignment_short_term; 
 
                     cout << "Enter value of Assignment " << k+1 << ":\n"; 
 
-                    cin >> Assignment _short_term; 
+                    cin >> Assignment_short_term; 
 
-                    if (!cin || Assignment _short_term == 0 || Assignment _short_term > 10) break; 
+                    if (!cin || Assignment_short_term == 0 || Assignment_short_term > 10) break; 
 
-                    pupil[i].Assignment .push_back(Assignment _short_term); 
+                    pupil[i].Assignment.push_back(Assignment_short_term); 
 
   
 
@@ -274,13 +274,13 @@ int main()
 
             case 'y': 
 
-                cout << "Enter number of Assignment s: "; 
+                cout << "Enter number of Assignments: "; 
 
-                int number_Assignment s; 
+                int number_Assignments; 
 
-                cin >> number_Assignment s; 
+                cin >> number_Assignments; 
 
-                for(int m=0; m<number_Assignment s; m++) 
+                for(int m=0; m<number_Assignments; m++) 
 
                 { 
 
@@ -300,9 +300,9 @@ int main()
 
         } 
 
-        pupil[i].Terminal_Score_median = Terminal_Score_median_function(pupil[i].Assignment , pupil[i].Examination); 
+        pupil[i].Terminal_Score_median = Terminal_Score_median_function(pupil[i].Assignment,pupil[i].Examination); 
 
-        pupil[i].Terminal_Score = Terminal_Score_average_function(pupil[i].Assignment , pupil[i].Examination); 
+        pupil[i].Terminal_Score = Terminal_Score_average_function(pupil[i].Assignment,pupil[i].Examination); 
 
   
 

@@ -70,7 +70,7 @@ int main()
 
   
 
-        float total_Assignment _short_term = 0; 
+        float total_Assignment_short_term = 0; 
 
         int k; 
 
@@ -96,17 +96,17 @@ int main()
 
   
 
-                    float Assignment _short_term; 
+                    float Assignment_short_term; 
 
                     cout << "Enter value of Assignment " << k+1 << ":\n"; 
 
-                    cin >> Assignment _short_term; 
+                    cin >> Assignment_short_term; 
 
-                    if (!cin || Assignment _short_term == 0 || Assignment _short_term > 10) break; 
+                    if (!cin || Assignment_short_term == 0 || Assignment_short_term > 10) break; 
 
-                    pupil[i].Assignment .push_back(Assignment _short_term); 
+                    pupil[i].Assignment .push_back(Assignment_short_term); 
 
-                    total_Assignment _short_term += Assignment _short_term; 
+                    total_Assignment_short_term += Assignment_short_term; 
 
   
 
@@ -114,7 +114,7 @@ int main()
 
   
 
-                if (total_Assignment _short_term == 0) break; 
+                if (total_Assignment_short_term == 0) break; 
 
                 cout << "Enter pupil's Score for the Examination: \n"; 
 
@@ -124,7 +124,7 @@ int main()
 
                 pupil[i].Examination = Examination_short_term; 
 
-                Terminal_Score_short_term = 0.4 * total_Assignment _short_term /  k + 0.6 * Examination_short_term; 
+                Terminal_Score_short_term = 0.4 * total_Assignment_short_term /  k + 0.6 * Examination_short_term; 
 
                 pupil[i].Terminal_Score = Terminal_Score_short_term; 
 
@@ -138,17 +138,17 @@ int main()
 
                 cout << "Enter number of Assignment s: "; 
 
-                int number_Assignment s; 
+                int number_Assignments; 
 
-                cin >> number_Assignment s; 
+                cin >> number_Assignments; 
 
-                for(int m=0; m<number_Assignment s; m++) 
+                for(int m=0; m<number_Assignments; m++) 
 
                 { 
 
                     pupil[i].Assignment .push_back(rand()%11); 
 
-                    total_Assignment _short_term += pupil[i].Assignment [m]; 
+                    total_Assignment_short_term += pupil[i].Assignment [m]; 
 
   
 
@@ -156,7 +156,7 @@ int main()
 
                 Examination_short_term = rand()%11; 
 
-                Terminal_Score_short_term = 0.4 * total_Assignment _short_term /  pupil[i].Assignment .size() + 0.6 * Examination_short_term; 
+                Terminal_Score_short_term = 0.4 * total_Assignment_short_term /  pupil[i].Assignment .size() + 0.6 * Examination_short_term; 
 
                 pupil[i].Terminal_Score = Terminal_Score_short_term; 
 
@@ -216,4 +216,3 @@ int main()
 
  
 
- 
